@@ -35,7 +35,7 @@ class Navbar extends React.Component {
 
     return (
       <div className="col-xl-12 justify-content-around d-flex shadow-sm bg-dark" style={{ padding: 10 }}>
-        <Link to="/"><button className="border border-primary btn bg-dark text-white">Track It!</button></Link>
+        {/* <Link to="/"><button className="border border-primary btn bg-dark text-white">Track It!</button></Link> */}
         <span >
           {this.props.loggedIn ? (
             <React.Fragment>
