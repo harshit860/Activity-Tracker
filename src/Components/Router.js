@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as RouterMain, Link,Route } from 'react-router-dom'
-import Home from '../Views/Home';
+import Main from '../Views/Main';
 
 function Locator() {
   return (
@@ -9,7 +9,7 @@ function Locator() {
         <Link to="/"  ></Link>
       </React.Fragment>
       <React.Fragment>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Main} />
       </React.Fragment>
     </RouterMain>
   )
