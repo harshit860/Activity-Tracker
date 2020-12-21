@@ -1,31 +1,51 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Redirect , useHistory} from 'react-router-dom';
 import './../Style/Main.css'
-import Books from './../Asset/001-documents.png'
-import File from './../Asset/029-light bulb.png'
-import Home from './../Asset/005-id card.png'
 
-export const Navbar = () => {
+export const Navbar = (props) => {
     const [home,useHome] = useState(false);
-      const [skills,useSkills] = useState(false);
-      const [projects,useProjects] = useState(false);
-      const [contact,useContact] = useState(false);
+    const [skills,useSkills] = useState(false);
+    const [projects,useProjects] = useState(false);
+    const [contact,useContact] = useState(false);
 
+    const [homeGlow,useHomeGlow] = useState(false)
+    const [skillGlow,useSkillGlow] = useState(false)
+    const [projectsGlow,useProjectsGlow] = useState(false)
+    const [contactsGlow,useContactsGlow] = useState(false)
 
+    let history = useHistory();
+  const routeTO = (path) =>{
+    history.push(path)
+  }
+
+  useEffect(() => {
+    let path = window.location.pathname || ''
+    switch(path) {
+      case '/skill':
+        alert('skill')
+        break;
+      case '/project':
+        alert('project')
+        break;
+      case '/contact':
+        
+        break;
+    }
+  },[])
   return (
       <div className="nav">
-                <div className="imageS" style={{marginTop:100}} onMouseEnter={(e)=>console.log(e.target.textContent)}>
-                  {home ? ('') : ('Home')}
-                </div>
-                <div className="imageS">
-                  {skills ? ('') : ('Skills')}
-                </div>
-                <div className="imageS">
-                  {projects ? ('') : ('Projects')}
-                </div>
-                <div className="imageS">
-                  {contact ? ('') : ('Contact')}
-                </div>
+        <div className="imageS" style={{marginTop:100}} onClick={()=>routeTO('/')} onMouseEnter={(e)=>console.log(e.target.textContent)}>
+          {home ? ('') : ('Home')}
+        </div>
+        <div className="imageS" onClick={()=>routeTO('/skill')}>
+          {skills ? ('') : ('Skills')}
+        </div>
+        <div className="imageS" onClick={()=>routeTO('/project')}>
+          {projects ? ('') : ('Projects')}
+        </div>
+        <div className="imageS" onClick={()=>routeTO('/contact')} style={{color:contactsGlow ? 'orange' :''}}>
+          {contact ? ('') : ('Contact')}
+        </div>
         </div>
   )
 }

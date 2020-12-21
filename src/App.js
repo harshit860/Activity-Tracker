@@ -5,7 +5,8 @@ import Locator from './Components/Router';
 
 
 
-function App() {
+function App(props) {
+    console.log(props)
   return (
     <React.Fragment>
       <Locator />
