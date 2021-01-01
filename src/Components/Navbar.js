@@ -22,13 +22,10 @@ export const Navbar = (props) => {
     let path = window.location.pathname || ''
     switch(path) {
       case '/skill':
-        alert('skill')
         break;
       case '/project':
-        alert('project')
         break;
       case '/contact':
-        
         break;
     }
   },[])

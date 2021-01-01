@@ -7,12 +7,14 @@ html, body {
   height:100vh;
   display: flex;
   flex-direction: row;
+  background:#1d1d1d
 }
 .skill {
   width: 100%;
   height:100vh;
   flex-direction: row;
   display:flex;
+  background:#1d1d1d
 }
 .nav {
   width: 8%;
@@ -26,17 +28,102 @@ html, body {
 
 .comps {
   width: 95%;
-  height:100vh;
+  /* height:100vh; */
   font-family: 'Amatic SC';
   font-size: 100px;
-  /* padding: 2%; */
-
+  justify-content: center !important;
+  display: flex !important;
+  flex-wrap: wrap;
+  height:fit-content;
+  /* background:#1d1d1d */
 }
 
+#parent {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+}
+#parent2 {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+}
+  #name {
+    /* font-size: 100px;
+    transition: .3s;
+    color:white; */
+  }
+#name:hover {
+  background:transparent;
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: white;
+  font-size: 132px;
+  color:white !important;
+  font-size: 155px;
+}
 
-#name {
-  
-  transition: 0.1s;
+.linkani:hover {
+  border: 1px solid grey
+}
+.wow {
+  background:#08fdd8;
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 130px;
+  transition: .1s;
+  cursor: pointer;
+}
+.wow:hover {
+  background:red;
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 135px;
+  transition: .3s;
+  cursor: pointer;
+}
+.wow:active{
+  background:orange;
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 135px;
+  transition: .3s;
+  cursor: pointer;
+}
+.wow2 {
+  background:whitesmoke;
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 130px;
+  transition: .3s;
+  cursor: pointer;
+}
+.wow2:hover {
+  background:rgb(176, 246, 11);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 135px;
+  transition: .3s;
+  cursor: pointer;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(359deg);
+  }
 }
 
 .menuBtn {
@@ -63,4 +150,62 @@ html, body {
   /* font-size: 50px; */
   rotate:10deg;
   /* box-shadow:0px 10px 20px 20px #0f0e14 ; */
+}
+
+.skillfill {
+  display: flex;
+  margin: 5%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+  .wow {
+    background:#08fdd8;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    transition: .1s;
+    cursor: pointer;
+  }
+  .wow:hover {
+    background:red;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 55px;
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .wow2 {
+    background:whitesmoke;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+  .wow2:hover {
+    background:rgb(176, 246, 11);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 55px;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+
+  .nav {
+    display: none;
+    transition: .3sgit;
+  }
 }
