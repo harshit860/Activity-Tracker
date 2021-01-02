@@ -65,7 +65,9 @@ html, body {
 }
 
 .linkani:hover {
-  border: 1px solid grey
+  font-size: 50px;
+  color:white;
+  text-decoration: none;
 }
 .wow {
   background:#08fdd8;
@@ -159,14 +161,96 @@ html, body {
   justify-content: space-around;
 }
 
+.linkani {
+  font-size: 50px;
+  color:white;
+  text-decoration: none;
+}
+.nav2{
+  display: none;
+}
+
+.projects {
+  display:flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  width: 100%;
+  align-items: center;
+  /* margin-top: 10%; */
+  overflow: scroll;
+}
+.project {
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  margin:5%;
+  border-radius: 5%;
+  height:400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Amatic SC';
+}
 @media only screen and (max-width: 600px) {
+  .projects {
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 100%;
+    align-items: center;
+    margin-top: 10%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav2{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    padding: 5px;
+    height:2%;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .imageS {
+    width: 60%;
+    height: 5%;
+    transition: .6s;
+    animation: forwards;
+    color:white;
+    cursor: pointer;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 80%;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    margin:5%;
+    height:500px;
+    align-items: center;
+    font-family: 'Amatic SC';
+    font-size: 80px !important;
+  }
+  .linkani {
+    font-size: 35px;
+    color:white;
+    text-decoration: none;
+  }
+  .linkani:hover {
+    font-size: 37px;
+    color:white;
+    text-decoration: none;
+  }
   .wow {
     background:#08fdd8;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 50px;
+    font-size: 35px;
     transition: .1s;
     cursor: pointer;
   }
@@ -176,7 +260,7 @@ html, body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 55px;
+    font-size: 40px;
     transition: .3s;
     cursor: pointer;
   }
@@ -187,7 +271,7 @@ html, body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 50px;
+    font-size: 35px;
     transition: .3s;
     cursor: pointer;
     margin-top: 50px;
@@ -198,7 +282,63 @@ html, body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+
+  .nav {
+    display: none;
+    transition: .3s;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .linkani {
+    font-size: 35px;
+    color:white;
+    text-decoration: none;
+  }
+  .wow {
+    background:#08fdd8;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 55px;
+    transition: .1s;
+    cursor: pointer;
+  }
+  .wow:hover {
+    background:red;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .wow2 {
+    background:whitesmoke;
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 55px;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+  .wow2:hover {
+    background:rgb(176, 246, 11);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
     transition: .3s;
     cursor: pointer;
     margin-top: 50px;
