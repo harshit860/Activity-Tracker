@@ -8,12 +8,15 @@ const Main = () => {
   const playSound = () => {
     var new1 = new Audio('https://freesound.org/data/previews/348/348463_3905081-lq.mp3')
     // ('https://freesound.org/data/previews/191/191618_2394245-lq.mp3')
+    new1.volume = 0.2
     new1.play()
+    
   }
 
   const playSound2 = () => {
     var new1 = new Audio('https://freesound.org/data/previews/191/191618_2394245-lq.mp3')
     // ('https://freesound.org/data/previews/191/191618_2394245-lq.mp3')
+    new1.volume = 0.2
     new1.play()
   }
   let count = 0
@@ -30,11 +33,13 @@ const Main = () => {
       if (count < name.length) {
         if (count % 2 == 0) {
           var new1 = new Audio('https://freesound.org/data/previews/348/348463_3905081-lq.mp3')
+          new1.volume = 0.2
           new1.play()
         }
         else
         {       
           var new1 = new Audio('https://freesound.org/data/previews/191/191618_2394245-lq.mp3')
+          new1.volume = 0.2 
           new1.play()        
         }
        
