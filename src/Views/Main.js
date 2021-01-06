@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './../Style/Main.css'
-
+import harshit from './../Asset/harshit.jpeg'
 import { Navbar } from '../Components/Navbar';
 
 const Main = () => {
@@ -64,7 +64,7 @@ const Main = () => {
   return (
     <div className="main">
       <Navbar />
-      <div className="comps" style={{ marginTop: '5%' }}>
+      <div className="comps">
         <div id="parent" style={{ width: '100%' }}>
           {name.map(val => {
             return <span onMouseEnter={(e) => playSound()} onClick={(e) => playSound()} style={{ height: '1%', alignItems: "center" }}>{val}</span>
@@ -75,15 +75,19 @@ const Main = () => {
             return <span onMouseEnter={(e) => playSound2()} onClick={(e) => playSound2()} style={{ height: '1%', alignItems: "center" }}>{val}</span>
           })}
         </div>
-        <div style={{ width: '100%', display: 'flex', flexDirection: 'row', justifyContent:"space-around"}}>
-          <div >
+        <div className="d-flex w-100 row justify-content-around">
+          <div style={{height:'5%'}}>
             <a className="linkani"  target="blank"   href="https://www.linkedin.com/in/harshit-gakhar-7b3921144/">linkedin</a>
           </div>
+            
           <div >
           <a className="linkani"  target="blank" href="https://github.com/harshit860">Github</a> </div>
         </div>
-        <div >
+          <div className="p-2 m-2">
             <span className="linkani"  >Location: Bangalore | Chandigarh</span>
+          </div>
+          <div className="p-2 m-2">
+            <span className="linkani"  >Email: harshitga@gmail.com</span>
           </div>
       </div>
 

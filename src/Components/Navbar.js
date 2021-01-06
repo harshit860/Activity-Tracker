@@ -32,20 +32,6 @@ export const Navbar = (props) => {
   return (
     <React.Fragment>
       <div className="nav">
-        <div className="imageS" style={{marginTop:100}} onClick={()=>routeTO('/')} onMouseEnter={(e)=>console.log(e.target.textContent)}>
-          {home ? ('') : ('Home')}
-        </div>
-        <div className="imageS" onClick={()=>routeTO('/skill')}>
-          {skills ? ('') : ('Skills')}
-        </div>
-        <div className="imageS" onClick={()=>routeTO('/project')}>
-          {projects ? ('') : ('Projects')}
-        </div>
-        <div className="imageS" onClick={()=>routeTO('/contact')} style={{color:contactsGlow ? 'orange' :''}}>
-          {contact ? ('') : ('Contact')}
-        </div>
-      </div>
-      <div className="nav2">
         <div className="imageS" onClick={()=>routeTO('/')} onMouseEnter={(e)=>console.log(e.target.textContent)}>
           {home ? ('') : ('Home')}
         </div>
@@ -55,9 +41,32 @@ export const Navbar = (props) => {
         <div className="imageS" onClick={()=>routeTO('/project')}>
           {projects ? ('') : ('Projects')}
         </div>
-        <div className="imageS" onClick={()=>routeTO('/contact')} style={{color:contactsGlow ? 'orange' :''}}>
-          {contact ? ('') : ('Contact')}
+        <div className="imageS" onClick={()=>routeTO('/project')}>
+          {projects ? ('') : ('Projects')}
         </div>
+        <div className="imageS" onClick={()=>routeTO('/project')}>
+          {projects ? ('') : ('Projects')}
+        </div>
+        <div className="imageS" onClick={()=>routeTO('/project')}>
+          {projects ? ('') : ('Projects')}
+        </div>
+        {/* <div className="imageS" onClick={()=>routeTO('/contact')} style={{color:contactsGlow ? 'orange' :''}}>
+          {contact ? ('') : ('Contact')}
+        </div> */}
+      </div>
+      <div className="nav2">
+        <div className="imageS" onClick={()=>routeTO('/')} onMouseEnter={(e)=>console.log(e.target.textContent)} style={{ marginLeft: '-40px'}}>
+          {home ? ('') : ('Home')}
+        </div>
+        <div className="imageS" onClick={()=>routeTO('/skill')}>
+          {skills ? ('') : ('Skills')}
+        </div>
+        <div className="imageS" onClick={()=>routeTO('/project')}>
+          {projects ? ('') : ('Projects')}
+        </div>
+        {/* <div className="imageS" onClick={()=>routeTO('/contact')} style={{color:contactsGlow ? 'orange' :''}}>
+          {contact ? ('') : ('Contact')}
+        </div> */}
       </div>
     </React.Fragment>
   )

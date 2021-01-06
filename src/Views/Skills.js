@@ -6,12 +6,16 @@ export default function Skills() {
   const [backgroundColor, handleBC] = useState('#1d1d1d')
 
   function change(skill) {
+    var new1 = new Audio('https://freesound.org/data/previews/245/245645_1038806-lq.mp3')
+    new1.volume = 0.2 
+    new1.play() 
+  
     switch (skill) {
       case 'react':
-        handleBC('#00c8ff')
+        handleBC('#61dafb')
         break;
       case 'js':
-        handleBC('yellow')
+        handleBC('#ffb400')
         break;
       case 'bootstrap':
         handleBC('#563d7c')
@@ -67,7 +71,6 @@ export default function Skills() {
           <img draggable src="https://www.flaticon.com/svg/static/icons/svg/331/331383.svg" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
           <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>CSS</p>
         </div>
-
       </div>
     </div>
   )
