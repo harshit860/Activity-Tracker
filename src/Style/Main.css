@@ -1,5 +1,6 @@
 html, body {
   overflow: auto;
+  scroll-behavior: smooth;
 }
 .main {
   height: 100vh;
@@ -59,7 +60,7 @@ html, body {
   justify-content: center !important;
   display: flex !important;
   flex-wrap: wrap;
-  height:fit-content;
+  /* height:fit-content; */
   /* background:#1d1d1d */
 }
 
@@ -215,46 +216,52 @@ a {
   /* margin-top: 10%; */
   overflow: hidden;
   overflow-y: scroll;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 .project {
-  width: 100%;
+  width: 20%;
   background-color: white;
   justify-content: center;
   display: flex;
   border-radius: 5%;
-  height:400px;
+  /* height:400px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Amatic SC';
-  margin: 10px;
-  padding: 15px;
+  /* font-family: 'Amatic SC'; */
+  margin: 40px;
+  padding: 10px;
 }
 @media only screen and (max-width: 600px) {
+  .skill {
+    margin-top: 30px;
+    height:auto !important;
+  }
   .projects {
-    display:flex;
-    flex-direction: column;
-    /* justify-content: center; */
+    display:flex !important;
+    flex-direction: column !important;
     width: 100%;
     align-items: center;
     margin-top: 10%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    flex-wrap:nowrap;
   }
   .nav2{
     display: flex;
     flex-direction: row ;
     position: fixed;
     top:0px;
+    left:0px;
     padding: 5px;
     height:auto;
     background-color: black;
     width: 100%;
-   
+    justify-content: space-around;
   }
   .imageS {
-    width: 50%;
+    /* width: 50%; */
     height: 5%;
     transition: .6s;
     animation: forwards;
@@ -265,15 +272,15 @@ a {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 80%;
+    width: 90%;
     background-color: white;
     justify-content: center;
     display: flex;
-    margin:5%;
-    height:500px;
+    margin:10% !important;
+    height:auto;
     align-items: center;
-    font-family: 'Amatic SC';
-    font-size: 80px !important;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    /* font-size: 80px !important; */
   }
   .linkani {
     font-size: 35px !important;
@@ -333,6 +340,13 @@ a {
     display: none;
     transition: .3s;
   }
+  .main {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background:#1d1d1d
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -389,5 +403,22 @@ a {
   .nav {
     display: none;
     transition: .3s;
+  }
+  .projects {
+    display:flex !important;
+    flex-direction: column !important;
+    /* justify-content: center; */
+    width: 100%;
+    /* align-items: center; */
+    margin-top: 10%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .main {
+    /* height: auto; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background:#1d1d1d
   }
 }

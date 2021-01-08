@@ -42,7 +42,7 @@ export default function Skills() {
     <div className="skill" style={{ backgroundColor: backgroundColor , transition:'.5s'}}>
       <Navbar />
       <div className="skillfill">
-        <div onclick={() => change('js')} onMouseEnter={() => change('js')} onMouseLeave={() => leave()}>
+        <div  onclick={() => change('js')} onMouseEnter={() => change('js')} onMouseLeave={() => leave()}>
           <img draggable src="https://a.thumbs.redditmedia.com/zDOFJTXd6fmlD58VDGypiV94Leflz11woxmgbGY6p_4.png" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
           <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>JAVASCRIPT</p>
         </div>

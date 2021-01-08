@@ -64,7 +64,7 @@ const Main = () => {
   return (
     <div className="main">
       <Navbar />
-      <div className="comps">
+      <div className="comps h-100">
         <div id="parent" style={{ width: '100%' }}>
           {name.map(val => {
             return <span onMouseEnter={(e) => playSound()} onClick={(e) => playSound()} style={{ height: '1%', alignItems: "center" }}>{val}</span>
