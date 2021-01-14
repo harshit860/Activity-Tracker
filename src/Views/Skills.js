@@ -32,6 +32,9 @@ export default function Skills() {
       case 'sql':
         handleBC('#5e95ae')
         break;
+      case 'firebase':
+        handleBC('grey');
+        break;
     }
   }
 
@@ -41,7 +44,7 @@ export default function Skills() {
   return (
     <div className="skill" style={{ backgroundColor: backgroundColor , transition:'.5s'}}>
       <Navbar />
-      <div className="skillfill">
+      <div className="skillfill" style={{justifyContent:"space-around",flexWrap:"wrap",alignItems:"center"}}>
         <div  onclick={() => change('js')} onMouseEnter={() => change('js')} onMouseLeave={() => leave()}>
           <img draggable src="https://a.thumbs.redditmedia.com/zDOFJTXd6fmlD58VDGypiV94Leflz11woxmgbGY6p_4.png" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
           <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>JAVASCRIPT</p>
@@ -71,6 +74,15 @@ export default function Skills() {
           <img draggable src="https://www.flaticon.com/svg/static/icons/svg/331/331383.svg" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
           <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>CSS</p>
         </div>
+        <div onMouseEnter={() => change('purple')} onMouseLeave={() => leave()}>
+          <img draggable src="https://everyday.codes/wp-content/uploads/2020/01/0-U2DmhXYumRyXH6X1.png" className="lang p-2" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
+          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>REDUX</p>
+        </div>
+        <div onMouseEnter={() => change('firebase')} onMouseLeave={() => leave()}>
+          <img draggable src="https://cdn-media-1.freecodecamp.org/images/0*CPTNvq87xG-sUGdx.png" className="lang p-2" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
+          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>REDUX</p>
+        </div>
+        
       </div>
     </div>
   )

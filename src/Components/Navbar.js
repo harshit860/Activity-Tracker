@@ -41,18 +41,6 @@ export const Navbar = (props) => {
         <div className="imageS" onClick={()=>routeTO('/project')}>
           {projects ? ('') : ('Projects')}
         </div>
-        <div className="imageS" onClick={()=>routeTO('/project')}>
-          {projects ? ('') : ('Projects')}
-        </div>
-        <div className="imageS" onClick={()=>routeTO('/project')}>
-          {projects ? ('') : ('Projects')}
-        </div>
-        <div className="imageS" onClick={()=>routeTO('/project')}>
-          {projects ? ('') : ('Projects')}
-        </div>
-        {/* <div className="imageS" onClick={()=>routeTO('/contact')} style={{color:contactsGlow ? 'orange' :''}}>
-          {contact ? ('') : ('Contact')}
-        </div> */}
       </div>
       <div className="nav2">
         <div className="imageS" onClick={()=>routeTO('/')} onMouseEnter={(e)=>console.log(e.target.textContent)} style={{ marginLeft: '-40px'}}>
@@ -64,9 +52,6 @@ export const Navbar = (props) => {
         <div className="imageS" onClick={()=>routeTO('/project')}>
           {projects ? ('') : ('Projects')}
         </div>
-        {/* <div className="imageS" onClick={()=>routeTO('/contact')} style={{color:contactsGlow ? 'orange' :''}}>
-          {contact ? ('') : ('Contact')}
-        </div> */}
       </div>
     </React.Fragment>
   )
