@@ -7,8 +7,7 @@ html, body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  background:#1d1d1d;
-  /* font-family: 'Times New Roman', Times, serif; */
+  justify-content:center
 }
 .skill {
   width: 100%;
@@ -16,8 +15,24 @@ html, body {
   height: auto;
   flex-direction: row;
   display:flex;
-  background:#1d1d1d;
 }
+.projectName {
+  background:linear-gradient(70deg,#ff8a09,#e52e71);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.projectBody {
+  background:linear-gradient(210deg,black,#ff8a09,black);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .lang {
   border:4px solid black !important;
   box-shadow: 0px 0px 30px black !important;
@@ -57,8 +72,8 @@ html, body {
 
 .comps {
   width: 95%;
-  font-family: 'Amatic SC';
-  font-size: 100px;
+  /* font-family: 'Amatic SC'; */
+  font-size: 10px !important;
   justify-content: center !important;
   display: flex !important;
   flex-wrap: wrap;
@@ -66,10 +81,20 @@ html, body {
   /* background:#1d1d1d */
 }
 
+.singleProject {
+    width:40%;
+    /* height:60%; */
+    background-color: white;
+    /* padding: 1%; */
+    /* align-content: center; 
+    */
+ 
+  }
+
 #parent {
   display: flex;
   justify-content: center;
-  height: fit-content;
+  height: fit-content   ;
   margin-top: 40px;
 }
 #parent2 {
@@ -78,13 +103,26 @@ html, body {
   height: fit-content;
 
 }
+#parent3 {
+  display: flex;
+  justify-content: flex-end;
+  height: fit-content;
+  
+}
+#parent4 {
+  display: flex;
+  justify-content: flex-end;
+  height: fit-content;
+  /* margin-left: -350px; */
+
+}
   #name {
     /* font-size: 100px;
     transition: .3s;
     color:white; */
   }
 #name:hover {
-  background:transparent;
+  background:transparent;   
   text-shadow: none;
   background-clip: text;
   -webkit-background-clip: text;
@@ -100,13 +138,14 @@ html, body {
   text-decoration: none; */
 }
 .wow {
-  background:#08fdd8;
-  text-shadow: none;
+  background:linear-gradient(70deg,#ff8a09,#e52e71);
+  text-shadow: 10px 10px 40px 10px  black;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 130px;
+  font-size: 50px;
   transition: .1s;
+
   cursor: pointer;
 }
 .wow:hover {
@@ -115,7 +154,7 @@ html, body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 135px;
+  font-size: 55px;
   transition: .3s;
   cursor: pointer;
 }
@@ -125,17 +164,17 @@ html, body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 135px;
+  font-size: 55px;
   transition: .3s;
   cursor: pointer;
 }
 .wow2 {
-  background:whitesmoke;
+  background:red;
   text-shadow: none;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 130px;
+  font-size: 40px;
   transition: .3s;
   cursor: pointer;
 }
@@ -145,7 +184,7 @@ html, body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 135px;
+  font-size: 45px;
   transition: .3s;
   cursor: pointer;
 }
@@ -157,7 +196,9 @@ html, body {
     transform: rotate(359deg);
   }
 }
-
+#parent1 #parent2 #parent3 #parent4 {
+  justify-content: center;
+}
 .menuBtn {
   border: none;
 }
@@ -199,8 +240,8 @@ html, body {
   width: 100%;
   align-items: center;
   /* margin-top: 10%; */
-  overflow: hidden;
-  overflow-y: scroll;
+  /* overflow: hidden; */
+  /* overflow-y: scroll; */
   flex-wrap: wrap;
   align-items: flex-start;
   padding:10%;
@@ -212,7 +253,7 @@ a {
 
 .linkani {
   font-size: 25px;
-  color:white;
+  color:black;
   text-decoration: none;
 }
 .nav2{
@@ -225,8 +266,8 @@ a {
   width: 100%;
   align-items: center;
   /* margin-top: 10%; */
-  overflow: hidden;
-  overflow-y: scroll;
+  /* overflow: hidden; */
+  /* overflow-y: scroll; */
   flex-wrap: wrap;
   align-items: flex-start;
 }
@@ -236,19 +277,15 @@ a {
   justify-content: center;
   display: flex;
   border-radius: 5%;
-  /* height:400px; */
-  display: flex;
   flex-direction: column;
   align-items: center;
-  /* font-family: 'Amatic SC'; */
   margin: 40px;
   padding: 10px;
-  height:fit-content;
 }
 @media only screen and (max-width: 600px) {
   .skill {
     margin-top: 30px;
-    height: 100vh !important;
+    height: 100%;
   }
   .projects {
     display:flex !important;
@@ -257,7 +294,7 @@ a {
     align-items: center;
     margin-top: 10%;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling: touch; */
     flex-wrap:nowrap;
   }
   .nav2{
@@ -287,16 +324,13 @@ a {
     width: 90%;
     background-color: white;
     justify-content: center;
-    display: flex;
     margin:10% !important;
     height:800px;
-    align-items: center;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    /* font-size: 80px !important; */
+
   }
   .linkani {
     font-size: auto ;
-    color:white;
+    /* color:white; */
     text-decoration: none;
   }
   .linkani:hover {
@@ -356,7 +390,6 @@ a {
     width: 100%;
     display: flex;
     flex-direction: row;
-    background:#1d1d1d
   }
 }
 
@@ -375,16 +408,16 @@ a {
   }
   .linkani {
     font-size: auto;
-    color:white;
+    /* color:white; */
     text-decoration: none;
   }
   .wow {
-    background:#08fdd8;
+    background:red;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 55px;
+    font-size: 30px;
     transition: .1s;
     cursor: pointer;
     margin-top: 50px;
@@ -395,18 +428,18 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 60px;
+    font-size: 55px;
     transition: .3s;
     cursor: pointer;
   }
 
   .wow2 {
-    background:whitesmoke;
+    background:red;
     text-shadow: none;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 35px;
+    font-size: 20px;
     transition: .3s;
     cursor: pointer;
     margin-top: 50px;
@@ -417,7 +450,7 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 30px;
+    font-size: 45px;
     transition: .3s;
     cursor: pointer;
     margin-top: 50px;
@@ -433,8 +466,8 @@ a {
     width: 100%;
     align-items: center;
     margin-top: 10%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    /* overflow-y: auto; */
+    /* -webkit-overflow-scrolling: touch; */
     flex-wrap:nowrap;
   }
 
@@ -443,10 +476,6 @@ a {
     width: 100%;
     display: flex;
     flex-direction: row;
-    background:#1d1d1d
   }
-  .project {
-    height:600px;
-    width:80%;
-  }
+
 }

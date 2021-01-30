@@ -7,7 +7,7 @@ import { GithubContributions } from 'react-github-graph'
 
 const Main = () => {
   const [quote, handleQuote] = useState({})
-  const [emailCopy,handleCopy] = useState('EMAIL')
+  const [emailCopy, handleCopy] = useState('EMAIL')
   const getQuote = () => {
     // axios.get('http://quotes.stormconsultancy.co.uk/random.json',{
 
@@ -37,8 +37,12 @@ const Main = () => {
   }
   let count = 0
   let count2 = 0
-  const name = ['<', 'H', 'A', 'R', 'S', 'H', 'I', 'T', '  ', 'G', 'A', 'K', 'H', 'A', 'R', '/', '>']
+  let count3 = 0
+  let count4 = 0
+  const name = ['<', 'H', 'A', 'R', 'S', 'H', 'I', 'T', 'G', 'A', 'K', 'H', 'A', 'R', '/', '>']
   const title = ['S', 'O', 'F', 'T', 'W', 'A', 'R', 'E', '_', 'E', 'N', 'G', 'I', 'N', 'E', 'E', 'R']
+  const fit = ['F', 'I', 'T', 'N', 'E', 'S', 'S', ' ', 'F', 'A', 'N', 'A', 'T', 'I', 'C',]
+  const creator = ['C','R','E','A','T','O','R']
 
   useEffect(() => {
     getQuote()
@@ -66,7 +70,7 @@ const Main = () => {
 
     const interval2 = setInterval(() => {
       if (count2 == title.length) {
-        clearInterval(interval)
+        clearInterval(interval2)
       }
       let parentDiv2 = document.querySelector('#parent2')
       if (count2 < title.length) {
@@ -75,7 +79,31 @@ const Main = () => {
       }
       count2 = count2 + 1
     }, 100)
-    return () => clearInterval(interval) || clearInterval(interval2)
+
+    const interval3 = setInterval(() => {
+      if (count3 == fit.length) {
+        clearInterval(interval3)
+      }
+      let parentDiv3 = document.querySelector('#parent3')
+      if (count3 < fit.length) {
+
+        parentDiv3.querySelectorAll('span')[count3].setAttribute('class', 'wow2')
+      }
+      count3 = count3 + 1
+    }, 100)
+
+    const interval4 = setInterval(() => {
+      if (count4 == creator.length) {
+        clearInterval(interval4)
+      }
+      let parentDiv4 = document.querySelector('#parent4')
+      if (count4 < creator.length) {
+
+        parentDiv4.querySelectorAll('span')[count4].setAttribute('class', 'wow2')
+      }
+      count4 = count4 + 1
+    }, 100)
+    return () => clearInterval(interval) || clearInterval(interval2) || clearInterval(interval3) || clearInterval(interval4)
   }, []);
 
   const copyFunction = () => {
@@ -88,45 +116,52 @@ const Main = () => {
     document.execCommand("copy");
     document.body.removeChild(dummy);
 
-    setTimeout(()=>{
-        handleCopy('EMAIL')
-    },2000)
+    setTimeout(() => {
+      handleCopy('EMAIL')
+    }, 2000)
   }
 
   return (
-    <div className="main">
-      <Navbar />
+    <div className="main container">
+      {/* <Navbar /> */}
       <div className="comps">
-        <div id="parent" style={{ width: '100%' }}>
+        <div id="parent" className="mb-3">
           {name.map(val => {
-            return <span onMouseEnter={(e) => playSound()} onClick={(e) => playSound()} style={{ height: '4%', alignItems: "center" }}>{val}</span>
+            return <span onMouseEnter={(e) => playSound()} onClick={(e) => playSound()} style={{ height: '1%', alignItems: "center", color: 'white' }}>{val}</span>
           })}
         </div>
-        <div id="parent2" style={{ width: '100%' }}>
+        <div id="parent2" style={{ width: '100%', marginTop: '-150px', justifyContent: "flex-start" }}>
           {title.map(val => {
-            return <span onMouseEnter={(e) => playSound2()} onClick={(e) => playSound2()} style={{ height: '2%', alignItems: "center" }}>{val}</span>
+            return <span onMouseEnter={(e) => playSound2()} onClick={(e) => playSound2()} style={{ height: '1%', alignItems: "center", color: 'white' }}>{val}</span>
           })}
         </div>
-        <div className="d-flex w-100 row justify-content-around">
-          <div style={{ height: '5%' }}>
-            <a className="linkani" target="blank" title="Open Linkedin" href="https://www.linkedin.com/in/harshit-gakhar-7b3921144/">linkedin</a>
+        <div id="parent3" style={{ width: '100%', marginTop: '-200px', justifyContent: "center" }}>
+          {fit.map(val => {
+            return <span onMouseEnter={(e) => playSound2()} onClick={(e) => playSound2()} style={{ height: '1%', alignItems: "center", color: "white" }}>{val}</span>
+          })}
+        </div>
+        <div id="parent4" style={{ width: '100%', marginTop: '-250px'}}>
+          {creator.map(val => {
+            return <span onMouseEnter={(e) => playSound2()} onClick={(e) => playSound2()} style={{ height: '1%', alignItems: "center", color: "white" }}>{val}</span>
+          })}
+        </div>
+        <div className="w-100  d-flex row justify-content-center" style={{ marginTop: '-250px', height: '10px' }}>
+          <div className="m-1">
+            <button onClick={() => window.open('https://www.linkedin.com/in/harshit-gakhar-7b3921144/')} className="btn btn-danger">Linkedin</button>
           </div>
-
-          <div >
-            <a className="linkani" title="Open Github" target="blank" href="https://github.com/harshit860">Github</a> </div>
-        </div>
-        <div className="p-2 m-2 row">
-          <span className="linkani"  >Location: Bangalore | Chandigarh</span>
-        </div>
-        <div className="p-2 m-2 row">
+          <div className="m-1">
+            <button onClick={() => window.open('https://github.com/harshit860')} className="btn btn-danger">Github</button>
+          </div>
+          <span style={{ width: '100%' }}></span>
+          <div className="mt-4">
+            <span className="linkani"  >Location: Bangalore | Chandigarh</span>
+          </div>
+          <span style={{ width: '100%' }}></span>
+          <div className="mt-4">
           <span className="linkani"  >Email: harshitga@gmail.com <button onClick={copyFunction} className="btn btn-dark" title="Copy email">{emailCopy}</button></span>
-
+          </div>
         </div>
-        {/* <div style={{position:'absolute',top:0,right:0,padding:10,width:'20%'}}>
-               <p style={{fontSize:25,color:'white'}}>{quote.quote} - {quote.author}</p>
-          </div> */}
       </div>
-
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { Navbar } from '../Components/Navbar'
 import './../Style/Main.css'
 
 export default function Skills() {
-  const [backgroundColor, handleBC] = useState('#1d1d1d')
+  const [backgroundColor, handleBC] = useState('white')
 
   function change(skill) {
     var new1 = new Audio('https://freesound.org/data/previews/245/245645_1038806-lq.mp3')
@@ -39,51 +39,56 @@ export default function Skills() {
   }
 
   function leave() {
-    handleBC('#1d1d1d')
+    handleBC('white')
   }
   return (
-    <div className="skill" style={{ backgroundColor: backgroundColor , transition:'.5s'}}>
-      <Navbar />
+    <React.Fragment className="border">
+      
+      <p className="text-center display-4">Skills</p>
+    <div className="skill mb-3" style={{ backgroundColor: backgroundColor , transition:'.5s'}}>
+      {/* <Navbar /> */}
+      
       <div className="skillfill" style={{justifyContent:"space-around",flexWrap:"wrap",alignItems:"center"}}>
         <div  onclick={() => change('js')} onMouseEnter={() => change('js')} onMouseLeave={() => leave()}>
           <img draggable src="https://a.thumbs.redditmedia.com/zDOFJTXd6fmlD58VDGypiV94Leflz11woxmgbGY6p_4.png" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>JAVASCRIPT</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic' }}>JAVASCRIPT</p>
         </div>
         <div onMouseEnter={() => change('react')} onMouseLeave={() => leave()}>
           <img draggable src="https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK_400x400.png" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>REACT</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic'}}>REACT</p>
         </div>
         <div onMouseEnter={() => change('sql')} onMouseLeave={() => leave()}>
           <img src="https://www.prchecker.info/free-icons/128x128/mysql_128_px.png" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>MY-SQL</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic' }}>MY-SQL</p>
         </div>
         <div onMouseEnter={() => change('html')} onMouseLeave={() => leave()}>
           <img src="https://www.retiredwhatnow.net/wp-content/uploads/2018/03/html_2.png" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>HTML</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic'}}>HTML</p>
         </div>
 
         <div onMouseEnter={() => change('bootstrap')} onMouseLeave={() => leave()}>
           <img draggable src="https://hackr.io/tutorials/bootstrap/logo-bootstrap.svg?ver=1555328097" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>BOOTSTRAP</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic'}}>BOOTSTRAP</p>
         </div>
         <div onMouseEnter={() => change('python')} onMouseLeave={() => leave()}>
           <img draggable src="https://static-s.aa-cdn.net/img/amazon/30600000503215/3cc55976c46a1427a2068b2adb4fce48" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>PYTHON</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic'}}>PYTHON</p>
         </div>
         <div onMouseEnter={() => change('css')} onMouseLeave={() => leave()}>
           <img draggable src="https://www.flaticon.com/svg/static/icons/svg/331/331383.svg" className="lang" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>CSS</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic' }}>CSS</p>
         </div>
         <div onMouseEnter={() => change('purple')} onMouseLeave={() => leave()}>
           <img draggable src="https://everyday.codes/wp-content/uploads/2020/01/0-U2DmhXYumRyXH6X1.png" className="lang p-2" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>REDUX</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic' }}>REDUX</p>
         </div>
         <div onMouseEnter={() => change('firebase')} onMouseLeave={() => leave()}>
           <img draggable src="https://cdn-media-1.freecodecamp.org/images/0*CPTNvq87xG-sUGdx.png" className="lang p-2" style={{ borderRadius: '50%', border: '4px solid whitesmoke', height: "140px", width: "140px" }} />
-          <p style={{ color: 'white', textAlign: 'center', fontStyle: 'italic', padding: 10 }}>REDUX</p>
+          <p style={{ color: 'black', textAlign: 'center', fontStyle: 'italic'}}>FIREBASE</p>
         </div>
         
       </div>
     </div>
+    </React.Fragment>
   )
 }
